@@ -1,0 +1,118 @@
+/*This if for the weather site and screened devices*/
+
+/**************************************************
+*CSS Table of Contents
+
+*1. Imports
+*2. General Styles
+2a. Navigation
+*3. Mobile Styles
+*4. Large Screen Styles
+*************************************************/
+
+
+/***********************************
+1. Imports
+***********************************/
+
+/*Importing the Sansita text to my file*/
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+/* import Normalize Style Sheet */
+@import url(normalize.css)
+
+/**************************************
+2. General Styles
+**************************************/
+
+/body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 20px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Sansita, "second choice", generic-family;
+}
+
+* {
+    box-sizing: border-box; /* changes width property
+    to total width instead of content width */
+}
+*:before, *:after{
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer {margin: 50px}
+header,
+nav
+section,
+main,
+figcaption,
+figure {
+    display: block; /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+}
+
+nav,header,footer{
+
+    background-color: #0e89d5;
+}
+
+main{
+
+    background-color: #fff;
+    background-image: url("/raindrops.jpg");
+
+    background-size: cover;
+}
+nav{
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+nav li{
+
+    display: inline;
+
+}
+nav a{
+
+    text-decoration: none;
+    color: inherit;
+}
+section{
+
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+#locationInfo ul{
+
+    display: inline;
+}
+footer{
+    margin-bottom: 2em;
+}
+.site-brand {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#companyName {font-size: 30px}
+
+#location {background-color: #FFF}
+
+/*********************************************
+2b. Navigation
+*********************************************/
+
+nav {
+    width= 100%;
+}

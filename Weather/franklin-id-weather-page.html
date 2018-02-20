@@ -1,45 +1,106 @@
 <!doctype html>
 <html lang="en-us">
+
 <head>
-<meta charset="UTF-8">
-<title>Franklin, ID | Weather Site</title>
-<meta name="description" content="The Weather Forecast Page for Franklin, Idaho">
-<meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <title>Franklin, ID | Weather Site</title>
+    <meta name="description" content="The Weather Forecast Page for Franklin, Idaho">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="CSS/screen.css" media="screen">
 </head>
+
 <body>
     <header>
-        <h1>&#9748; The Weather Site</h1>
-        <nav>
-            Home |
-            Current |
-            Search |
-            Franklin|
-            Springfield
-        </nav>
+        <div id="branding">
+        <h1 id="site-name">&#9748; The Weather Site</h1>
+        </div>
+            <nav>
+            <ul id="page-nav">
+            <li>Current</li>
+            <li> Search </li>
+            <li>Franklin</li>
+            <li>Springfield</li>
+            <li>Greenfield</li>
+            </ul>
+            </nav>
+
     </header>
 
 
     <main>
-    <h1>Franklin, ID</h1>
-        <p><b>ZIP:</b>83237 | <b>Elevation:</b>4501 Ft. | <b>Location:</b> 42.0135&#176; N, 42.03135&#176; W  </p>
+        <h1 id="location">Franklin, ID</h1>
+        <section id="locationInfo">
+            <dl>
+                <dt>Zip:</dt>
+                <dd id='zip'>83237</dd>
+                <dt>Elevation:</dt>
+                <dd id='elevation'>4501 ft.</dd>
+                <dt>Location:</dt>
+                <dd id='latlng'>42.011902&#176N, -111.803757&#176W</dd>
+            </dl>
+        </section>
 
-    <h2>Temperature</h2>
-        <p>34&#176; F 21&#176; F</p>
-        <p>Feels Like 21&#176; F </p>
+        <div id="curWeather"></div>
+        <div id="smallConditions">
+            <section id='temps'>
+                <h2>Temperature</h2>
+                <p>24&#176;F</p>
+                <p><span id="high">34&#176;F</span> <span id="low">21&#176;F</span></p>
+                <p id="feel">Feels like 21&#176;F</p>
+            </section>
+            <section id='winds'>
+                <h2>Wind</h2>
+                <div id='dial' class="nw"></div>
+                <div id="windInfo">
+                    <p id="windSpeed">2 mph</p>
+                </div>
+                <ul id="windDir">
+                    <li><b>Direction:</b> SW</li>
+                    <li><b>Gusts:</b> 5mph</li>
+                </ul>
+            </section>
+        </div>
 
-    <h2>Wind</h2>
-        <p>2 MPH</p>
-        <p><b> Direction</b>: NW</p>
-        <p><b>Gusts</b>: 5MPH</p>
+        <div>
+            <section id="video">
+                <img src="images/plan-images/video.png" title="View the video forecast for Franklin, Idaho.">
+            </section>
+        </div>
 
-    <h2>Video Forecast</h2>
-
-        <h3><b>Hourly Forecast</b></h3>
-        <p>12am: 21F| 1am: 21F| 3am: 20F| 4am :20F|5am: 20F| 6am: 20F| 7am: 21F| 8am:21F|</p>
+            <section id='hourly'>
+                <h1>Hourly Forcast</h1>
+                <ul>
+                    <li>12am: 21&#176;F</li>
+                    <li>1am: 20&#176;F</li>
+                    <li>2am: 20&#176;F</li>
+                    <li>3am: 20&#176;F</li>
+                    <li>4am: 20&#176;F</li>
+                    <li>5am: 20&#176;F</li>
+                    <li>6am: 20&#176;F</li>
+                    <li>7am: 21&#176;F</li>
+                    <li>8am: 25&#176;F</li>
+                    <li>9am: 28&#176;F</li>
+                    <li>10am: 30&#176;F</li>
+                    <li>11am: 34&#176;F</li>
+                    <li>12pm: 35&#176;F</li>
+                    <li>1pm: 37&#176;F</li>
+                    <li>2pm: 48&#176;F</li>
+                    <li>3pm: 39&#176;F</li>
+                    <li>4pm: 39&#176;F</li>
+                    <li>5pm: 38&#176;F</li>
+                    <li>6pm: 36&#176;F</li>
+                    <li>7pm: 34&#176;F</li>
+                    <li>8pm: 33&#176;F</li>
+                    <li>9pm: 33&#176;F</li>
+                    <li>10pm: 31&#176;F</li>
+                    <li>11pm: 31&#176;F</li>
+                </ul>
+            </section>
 
     </main>
     <footer>
         &copy;2018 Weather Site
     </footer>
 </body>
+
 </html>

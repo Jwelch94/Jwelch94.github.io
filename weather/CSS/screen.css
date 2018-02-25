@@ -1,118 +1,236 @@
-/*This if for the weather site and screened devices*/
+/*This is my screen css file*/
+/*@imports comes first.*/
 
-/**************************************************
-*CSS Table of Contents
-
-*1. Imports
-*2. General Styles
-2a. Navigation
-*3. Mobile Styles
-*4. Large Screen Styles
-*************************************************/
-
-
-/***********************************
-1. Imports
-***********************************/
-
-/*Importing the Sansita text to my file*/
 @import url('https://fonts.googleapis.com/css?family=Sansita');
-
-/* import Normalize Style Sheet */
-@import url(normalize.css)
-
-/**************************************
-2. General Styles
-**************************************/
-
-/body {
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, arial, sans-serif;
-    font-size: 20px;
-}
-
-h1,h2,h3,h4,h5,h6{
-    font-family: Sansita, "second choice", generic-family;
-}
+@import url('normalize.css');
 
 * {
-    box-sizing: border-box; /* changes width property
+    box-sizing: border-box;
+    /* changes width property
     to total width instead of content width */
 }
-*:before, *:after{
+
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
 article,
 aside,
-footer {margin: 50px}
+footer,
 header,
-nav
+nav,
 section,
 main,
 figcaption,
 figure {
-    display: block; /* just in case we have
+    display: block;
+    /* just in case we have
     any older browsers that don't recognize
     the HTML5 semantic elements */
 }
 
-nav,header,footer{
+body {
+    margin: 15px;
 
+    padding:0;
+
+    font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Sansita, arial, sans-serif;
+}
+
+/* Mobile rules*/
+
+header, nav ul, h1, #locationInfo{
+    display: flex;
+}
+
+
+header{
     background-color: #0e89d5;
+    justify-content: flex-start;
 }
 
-main{
 
-    background-color: #fff;
-    background-image: url("/raindrops.jpg");
-
-    background-size: cover;
+.logo {
+    font-size: 3em;
+    padding-top: 5px;
 }
-nav{
 
+
+.site-name {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+
+#locationData {
+    width: 100%;
+    display: flex;
+    font-size: .65em;
+    padding-left: 5px;
+}
+
+nav {
+    width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: #0e89d5;
 }
-nav li{
 
-    display: inline;
 
+nav ul {
+
+    padding-left: 1px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    overflow-x: auto;
 }
-nav a{
 
+nav ul li {
+    list-style: none;
+    height: auto;
+    padding: 3px;
+}
+
+#hourly ul{
+    list-style: none;
+}
+
+
+nav a:link {
     text-decoration: none;
-    color: inherit;
+    color: #fff;
 }
-section{
 
-    background-color: rgba(200,200,200,.6);
+nav a:visited {
+    color: #000;
+}
+
+nav a:hover {
+    color: #FFF;
+}
+
+nav a:active {
+    color: #FFF;
+}
+
+#curWeather {
+    background-image: url("/raindrops.jpg");
+    background-size: cover;
     margin: .2em auto;
+    border: 1px solid;
+}
+
+#smallConditions {
+    display: flex;
+    background-color: rgba(200, 200, 200, .8);
+    margin: 10px;
+    padding: 0px 0px 0px 20px;
     border: 1px solid;
     border-radius: 15px;
 }
-#locationInfo ul{
 
-    display: inline;
+#temps h2{
+    display: none;
 }
-footer{
+
+#temps {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 60%;
+}
+
+#temps h3 {
+    font-size: 39px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#high {
+    color: red;
+    padding-left: 26px;
+    margin: 0px;
+}
+
+#low {
+    color: blue;
+    padding-left: 15px;
+    margin: 0px;
+}
+
+#north{
+    text-align: center;
+    margin-right: 25%;
+}
+
+#dial img {
+    align-self: center;
+    width: 75%;
+}
+
+#wind {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#wind p {
+    margin: 0px;
+}
+
+#wind h2 {
+    display: none;
+}
+
+#video {
+    background-color: rgba(200, 200, 200, .8);
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+#video h3{
+    display: none;
+}
+
+#video img {
+    display: block;
+    margin: 10px auto;
+}
+
+#hourly h3{
+    display: none;
+}
+
+#hourly ul {
+    display: flex;
+    overflow-x: scroll;
+    background-color: gray;
+    color: white;
+    padding-left: 0px;
+}
+
+#hourly li{
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+footer {
     margin-bottom: 2em;
-}
-.site-brand {
-    font-size: 2em;
-    font-weight: 600;
-}
-
-#companyName {font-size: 30px}
-
-#location {background-color: #FFF}
-
-/*********************************************
-2b. Navigation
-*********************************************/
-
-nav {
-    width= 100%;
+    background-color: #0e89d5;
 }

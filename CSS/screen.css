@@ -1,9 +1,19 @@
-/*This is my screen css file*/
-/*@imports comes first.*/
+/*CSS file for Weather Site*/
+
+/***************************************************************
+Table of contents
+1. Imports
+2. General styles
+3.Mobile
+
+*************************************************************/
+
+/**************************@imports****************************/
 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('normalize.css');
 
+/*********************General Styles**************************************/
 * {
     box-sizing: border-box;
     /* changes width property
@@ -59,6 +69,10 @@ header{
     justify-content: flex-start;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 .logo {
     font-size: 3em;
@@ -82,6 +96,10 @@ h1{
     display: flex;
     font-size: .65em;
     padding-left: 5px;
+
+/********************************************************
+    Navigation
+    ******************************************************/
 }
 
 nav {
@@ -179,6 +197,8 @@ nav a:active {
     margin-right: 25%;
 }
 
+
+}
 #dial img {
     align-self: center;
     width: 75%;

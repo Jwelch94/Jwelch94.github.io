@@ -6,7 +6,7 @@
         <title>Franklin, ID | Weather Site</title>
         <meta name="description" content="Franklin, ID Weather Page.">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/CSS/screen.css">
+        <link rel="stylesheet" href="CSS/screen.css">
     </head>
 
     <body>
@@ -29,10 +29,17 @@
 
         <main>
 
-            <h1>Franklin, Idaho</h1>
+            <h1 id="location">Franklin, Idaho</h1>
 
             <div id="locationData">
-                <p><b>Zip:</b> 83237 |<b>Elevation:</b> 4501 ft. |<b>Location:</b> 42.07&deg; S,111.79&deg; W</p>
+                <dl>
+                    <dt><b>Zip:</b></dt>
+                    <dd id="zip">83237 | </dd>
+                    <dt><b>Elevation:</b></dt>
+                    <dd id="elevation">4501ft. | </dd>
+                    <dt><b>Location:</b></dt>
+                    <dd id="location">42.0135&#176; N, 111.8072&#176; W</dd>
+                </dl>
             </div>
 
 
@@ -102,7 +109,7 @@
         <footer>
             &copy;2018 Weather Site
         </footer>
-    <script src="/JS/weather-functions.js"></script>
+        <script src="/JS/weather-functions.js"></script>
     </body>
 
 </html>

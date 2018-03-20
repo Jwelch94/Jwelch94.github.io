@@ -4,6 +4,8 @@
 Table of contents
 1. Imports
 2. General styles
+2a. Wind
+2b. Tempature
 3.Mobile
 
 *************************************************************/
@@ -11,9 +13,9 @@ Table of contents
 /**************************@imports****************************/
 
 @import url('https://fonts.googleapis.com/css?family=Sansita');
-@import url('normalize.css');
+@import url(/CSS/normalize.css);
 
-/*********************General Styles**************************************/
+/*******************General Styles**************************************/
 * {
     box-sizing: border-box;
     /* changes width property
@@ -68,6 +70,104 @@ header{
     background-color: #0e89d5;
     justify-content: flex-start;
 }
+
+/************************************************
+        -------- 2a. WIND -------------
+*********************************************/
+
+#north{
+    text-align: center;
+    margin-right: 25%;
+}
+
+
+#dial {
+    height: 150px;
+    width: 150px;
+    background: no-repeat center/85% url('/wind-pointer.png');
+    z-index: 100;
+    margin: -.6em auto 0;
+}
+
+#dial img {
+    align-self: center;
+    width: 75%;
+}
+
+#wind {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.north{
+    transform: rotate(0deg);
+}
+.ne{
+    transform: rotate(45deg);
+}
+.nw{
+    transform: rotate(315deg);
+}
+.s{
+    transform: rotate(180deg);
+}
+.se{
+    transform: rotate(135deg);
+}
+.sw{
+    transform: rotate(225deg);
+}
+.east{
+    transform: rotate(90deg);
+}
+.west{
+    transform: rotate(270deg);
+}
+
+#wind p {
+    margin: 0px;
+}
+
+#wind h2 {
+    display: none;
+}
+
+/******************************************************
+-------------------2b. Tempature ----------------------
+*******************************************************/
+
+#temps h2{
+    display: none;
+}
+
+#temps {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 60%;
+}
+
+#temps h3 {
+    font-size: 39px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#high {
+    color: red;
+    padding-left: 26px;
+    margin: 0px;
+}
+
+#low {
+    color: blue;
+    padding-left: 15px;
+    margin: 0px;
+}
+
+
+
+
 
 img {
     max-width: 100%;
@@ -154,6 +254,26 @@ nav a:active {
     border: 1px solid;
 }
 
+.clear {
+    background-image: url("/weather-backgrounds/clear-400.jpg");
+}
+
+.snow {
+    background-image: url("/weather-backgrounds/snow-400.jpg");
+}
+
+.rain {
+    background-image: url("/weather-backgrounds/rain-400.jpg");
+}
+
+.fog {
+    background-image: url("/weather-backgrounds/fog-400.jpg");
+}
+
+.cloud {
+    background-image: url("/weather-backgrounds/clouds-400.jpg");
+}
+
 #smallConditions {
     display: flex;
     background-color: rgba(200, 200, 200, .8);
@@ -163,59 +283,7 @@ nav a:active {
     border-radius: 15px;
 }
 
-#temps h2{
-    display: none;
-}
 
-#temps {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    width: 60%;
-}
-
-#temps h3 {
-    font-size: 39px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#high {
-    color: red;
-    padding-left: 26px;
-    margin: 0px;
-}
-
-#low {
-    color: blue;
-    padding-left: 15px;
-    margin: 0px;
-}
-
-#north{
-    text-align: center;
-    margin-right: 25%;
-}
-
-
-}
-#dial img {
-    align-self: center;
-    width: 75%;
-}
-
-#wind {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-#wind p {
-    margin: 0px;
-}
-
-#wind h2 {
-    display: none;
-}
 
 #video {
     background-color: rgba(200, 200, 200, .8);
@@ -253,4 +321,32 @@ nav a:active {
 footer {
     margin-bottom: 2em;
     background-color: #0e89d5;
+}
+/*******************************************************************
+----------------4. large Screens------------
+********************************************************************/
+
+@media screen and (min-width: 760px) {
+/*************************************************************************
+---------------------Background------------------------------------
+*************************************************************************/
+    .clear {
+        background-image: url("/weather-backgrounds/clear-800.jpg");
+    }
+
+    .snow {
+        background-image: url("/weather-backgrounds/snow-800.jpg");
+    }
+
+    .rain {
+        background-image: url("/weather-backgrounds/rain-800.jpg");
+    }
+
+    .fog {
+        background-image: url("/weather-backgrounds/fog-800.jpg");
+    }
+
+    .cloud {
+        background-image: url("/weather-backgrounds/clouds-800.jpg");
+    }
 }

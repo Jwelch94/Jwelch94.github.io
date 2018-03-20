@@ -25,7 +25,7 @@ function getGeoLocation() {
 
 } // end getGeoLocation
 
-// Get Data from API
+/*   Get Data from API
 function getData(LOCALE) {
     const WU_API_KEY = '54aacdb03b7388c9';
     const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
@@ -37,4 +37,4 @@ function getData(LOCALE) {
         displayData(data);
     })
         .catch(error => console.log('There was an error: ', error))
-} // end getData function
+} // end getData function */

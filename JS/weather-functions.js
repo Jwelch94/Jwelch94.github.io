@@ -95,3 +95,18 @@ function windDial(direction){
             break;
     }
 }
+
+// Get Data from API
+function getData(LOCALE) {
+    const WU_API_KEY = '54aacdb03b7388c9';
+    const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
+    fetch(URL)
+        .then(response => response.json())
+        .then(function (data) {
+        console.log('Json object from getData function:');
+        console.log(data);
+        displayData(data);
+    })
+        .catch(error => console.log('There was an error: ', error))
+} // end getData function
+
